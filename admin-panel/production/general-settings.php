@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
     <!-- Meta, title, CSS, favicons, etc. -->
@@ -37,9 +38,11 @@
             include '../operations/connectdb.php';
 
             $setup = $db->prepare("SELECT * from config WHERE config_id=:id");
-            $setup->execute(array(
-                "id" => 1
-            ));
+            $setup->execute(
+                array(
+                    "id" => 1
+                )
+            );
             $result = $setup->fetch(PDO::FETCH_ASSOC);
             ?>
 
@@ -51,7 +54,23 @@
                         <div class="col-md-12 col-sm-12 col-xs-12">
                             <div class="x_panel">
                                 <div class="x_title">
-                                    <h2>General Settings <small>Operation Status: </small></h2>
+                                    <h2>General Settings
+                                        <?php
+                                        if (isset($_GET["updateStatus"])) {
+                                            if ($_GET["updateStatus"]) {
+                                                $text = "Update is successful.";
+                                                $color = "green";
+                                            } else {
+                                                $text = "Update is not successful.";
+                                                $color = "red";
+                                            }
+                                        } else {
+                                            $text = "Operation status.";
+                                            $color = "gray";
+                                        }
+                                        echo "<small style='color:$color;'>$text</small>";
+                                        ?>
+                                    </h2>
                                     <ul class="nav navbar-right panel_toolbox">
                                         <li><a class="collapse-link"><i class="fa fa-chevron-up"></i></a>
                                         </li>
@@ -65,13 +84,14 @@
                                     <form action="../operations/updateGeneralSettings.php" method="POST"
                                         id="update-general-settings-id" data-parsley-validate
                                         class="form-horizontal form-label-left">
-                                        
+
                                         <div class="form-group">
                                             <label class="control-label col-md-3 col-sm-3 col-xs-12"
                                                 for="site_title">Website Title <span class="required">*</span>
                                             </label>
                                             <div class="col-md-6 col-sm-6 col-xs-12">
-                                                <input type="text" id="site_title" required value="<?php echo $result["site_title"] ?>"
+                                                <input type="text" id="site_title" required
+                                                    value="<?php echo $result["site_title"] ?>"
                                                     class="form-control col-md-7 col-xs-12" name="site_title">
                                             </div>
                                         </div>
@@ -82,7 +102,8 @@
                                                     class="required">*</span>
                                             </label>
                                             <div class="col-md-6 col-sm-6 col-xs-12">
-                                                <input type="text" id="site_description" required value="<?php echo $result["site_description"] ?>"
+                                                <input type="text" id="site_description" required
+                                                    value="<?php echo $result["site_description"] ?>"
                                                     class="form-control col-md-7 col-xs-12" name="site_description">
                                             </div>
                                         </div>
@@ -92,7 +113,8 @@
                                                 for="site_keyword">Website Keyword <span class="required">*</span>
                                             </label>
                                             <div class="col-md-6 col-sm-6 col-xs-12">
-                                                <input type="text" id="site_keyword" required value="<?php echo $result["site_keyword"] ?>"
+                                                <input type="text" id="site_keyword" required
+                                                    value="<?php echo $result["site_keyword"] ?>"
                                                     class="form-control col-md-7 col-xs-12" name="site_keyword">
                                             </div>
                                         </div>
@@ -102,7 +124,8 @@
                                                 for="site_author">Website Author <span class="required">*</span>
                                             </label>
                                             <div class="col-md-6 col-sm-6 col-xs-12">
-                                                <input type="text" id="site_author" required value="<?php echo $result["site_author"] ?>"
+                                                <input type="text" id="site_author" required
+                                                    value="<?php echo $result["site_author"] ?>"
                                                     class="form-control col-md-7 col-xs-12" name="site_author">
                                             </div>
                                         </div>
@@ -110,22 +133,11 @@
                                         <div class="form-group">
                                             <div class="col-md-6 col-sm-6 col-xs-12 col-md-offset-3">
                                                 <button type="submit" class="btn btn-primary">Cancel</button>
-                                                <button type="submit" class="btn btn-success" name="save-updated-settings">Submit</button>
+                                                <button type="submit" class="btn btn-success"
+                                                    name="save-updated-settings">Submit</button>
                                             </div>
 
                                         </div>
-                                        <?php
-                                        if (isset($_GET["updateStatus"])) {
-                                            if ($_GET["updateStatus"]) {
-                                                $text = "Update is successful.";
-                                                $color = "green";
-                                            } else {
-                                                $text = "Update is not successful.";
-                                                $color = "red";
-                                            }
-                                            echo "<p style='color:$color;' class='col-md-6 col-sm-6 col-xs-12 col-md-offset-3'>$text</p>";
-                                        }
-                                        ?>
                                     </form>
                                 </div>
                             </div>

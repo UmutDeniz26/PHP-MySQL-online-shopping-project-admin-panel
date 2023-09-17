@@ -54,22 +54,36 @@
                         <div class="col-md-12 col-sm-12 col-xs-12">
                             <div class="x_panel">
                                 <div class="x_title">
-                                    <h2>General Settings <small>Operation Status: </small></h2>
+                                    <h2>General Settings
+                                        <?php
+                                        if (isset($_GET["updateStatus"])) {
+                                            if ($_GET["updateStatus"]) {
+                                                $text = "Update is successful.";
+                                                $color = "green";
+                                            } else {
+                                                $text = "Update is not successful.";
+                                                $color = "red";
+                                            }
+                                        } else {
+                                            $text = "Operation status.";
+                                            $color = "gray";
+                                        }
+                                        echo "<small style='color:$color;'>$text</small>";
+                                        ?>
+                                    </h2>
                                     <ul class="nav navbar-right panel_toolbox">
                                         <li><a class="collapse-link"><i class="fa fa-chevron-up"></i></a>
                                         </li>
-                                        <li><a class="close-link"><i class="fa fa-close"></i></a>
+                                        <li><a class="cl    ose-link"><i class="fa fa-close"></i></a>
                                         </li>
                                     </ul>
                                     <div class="clearfix"></div>
                                 </div>
                                 <div class="x_content">
                                     <br />
-                                    <form action="../operations/updateContantSettings.php" method="POST"
+                                    <form action="../operations/updateContanctSettings.php" method="POST"
                                         id="update-general-settings-id" data-parsley-validate
                                         class="form-horizontal form-label-left">
-
-                                        <!-- site_tel, site_gsm, site_faks, site_mail-->
 
                                         <div class="form-group">
                                             <label class="control-label col-md-3 col-sm-3 col-xs-12"
@@ -114,9 +128,50 @@
                                                     class="form-control col-md-7 col-xs-12" name="site_mail">
                                             </div>
                                         </div>
-                                        
 
+                                        <div class="form-group">
+                                            <label class="control-label col-md-3 col-sm-3 col-xs-12"
+                                                for="site_author">City<span class="required">*</span>
+                                            </label>
+                                            <div class="col-md-6 col-sm-6 col-xs-12">
+                                                <input type="text" id="site_city" required
+                                                    value="<?php echo $result["site_city"] ?>"
+                                                    class="form-control col-md-7 col-xs-12" name="site_city">
+                                            </div>
+                                        </div>
 
+                                        <div class="form-group">
+                                            <label class="control-label col-md-3 col-sm-3 col-xs-12"
+                                                for="site_author">State<span class="required">*</span>
+                                            </label>
+                                            <div class="col-md-6 col-sm-6 col-xs-12">
+                                                <input type="text" id="site_state" required
+                                                    value="<?php echo $result["site_state"] ?>"
+                                                    class="form-control col-md-7 col-xs-12" name="site_state">
+                                            </div>
+                                        </div>
+
+                                        <div class="form-group">
+                                            <label class="control-label col-md-3 col-sm-3 col-xs-12"
+                                                for="site_author">Address<span class="required">*</span>
+                                            </label>
+                                            <div class="col-md-6 col-sm-6 col-xs-12">
+                                                <textarea id="site_adress" required
+                                                    class="form-control col-md-7 col-xs-12"
+                                                    name="site_adress"><?php echo $result["site_adress"] ?></textarea>
+                                            </div>
+                                        </div>
+
+                                        <div class="form-group">
+                                            <label class="control-label col-md-3 col-sm-3 col-xs-12"
+                                                for="site_author">Shift<span class="required">*</span>
+                                            </label>
+                                            <div class="col-md-6 col-sm-6 col-xs-12">
+                                                <input type="text" id="site_shift" required
+                                                    value="<?php echo $result["site_shift"] ?>"
+                                                    class="form-control col-md-7 col-xs-12" name="site_shift">
+                                            </div>
+                                        </div>
 
 
                                         <div class="ln_solid"></div>
@@ -128,18 +183,6 @@
                                             </div>
 
                                         </div>
-                                        <?php
-                                        if (isset($_GET["updateStatus"])) {
-                                            if ($_GET["updateStatus"]) {
-                                                $text = "Update is successful.";
-                                                $color = "green";
-                                            } else {
-                                                $text = "Update is not successful.";
-                                                $color = "red";
-                                            }
-                                            echo "<p style='color:$color;' class='col-md-6 col-sm-6 col-xs-12 col-md-offset-3'>$text</p>";
-                                        }
-                                        ?>
                                     </form>
                                 </div>
                             </div>
