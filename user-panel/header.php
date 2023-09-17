@@ -2,8 +2,8 @@
 			<div class="container">
 				<div class="row">
 					<div class="col-xs-6 col-md-4 main-logo">
-						<a href="index-1.htm"><img src="images\logo.png" alt="logo" class="logo img-responsive" width=200 height=200></a>
-						<a href="index-1.htm"><img src="images\motto.png" alt="logo" class="logo img-responsive" width=200 height=200></a>
+						<a href="./"><img src="images\logo.png" alt="logo" class="logo img-responsive" width=200 height=200></a>
+						<a href="./"><img src="images\motto.png" alt="logo" class="logo img-responsive" width=200 height=200></a>
 					</div>
 					<div class="col-md-8">
 						<div class="pushright">

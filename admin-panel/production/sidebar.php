@@ -33,6 +33,7 @@
                             <li><a href="API-settings.php">API Settings</a></li>
                             <li><a href="social-media-settings.php">Social Media Settings</a></li>
                             <li><a href="SMTP-settings.php">SMTP Settings</a></li>
+                            <li><a href="about-settings.php">About Page Settings</a></li>
                         </ul>
                     </li>
                 </ul>

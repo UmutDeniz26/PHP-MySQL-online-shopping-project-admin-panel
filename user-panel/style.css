@@ -1034,15 +1034,19 @@ html,body {
 	padding-left:60px;
 	font-size:13px;
 }
-.fphone {
-	background:url(images/iconphone.png) no-repeat 0 center transparent;
+.fadress {
+	background:url(images/iconadress.png) no-repeat 0 center transparent;
+	background-size: 30px 30px;
+	
 }
 .fmail {
 	background:url(images/iconmail.png) no-repeat 0 center transparent;
+	background-size: 30px 30px;
 }
 	
 .fmobile {
 	background:url(images/iconmobile.png) no-repeat 0 center transparent;
+	background-size: 30px 30px;
 }	
 .footer{
 	min-height:137px;
@@ -1123,32 +1127,34 @@ html,body {
 }
 .ftwitter {
 	background:url(images/ftwitter.png) no-repeat;
+	background-size: 24px 24px;
 }
 .ftwitter:hover {
 	background:url(images/ftwitterhover.png) no-repeat;
+	background-size: 24px 24px;
 }
 .ffacebook {
 	background:url(images/ffacebook.png) no-repeat;
+	background-size: 24px 24px;
 }
 .ffacebook:hover {
 	background:url(images/ffacebookhover.png) no-repeat;
+	background-size: 24px 24px;
 }
-.fflickr {
-	background:url(images/fflickr.png) no-repeat;
+.fyoutube {
+	background:url(images/fyoutube.png) no-repeat;
+	background-size: 24px 24px;
 }
-.fflickr:hover {
-	background:url(images/fflickrhover.png) no-repeat;
+.fyoutube:hover {
+	background:url(images/fyoutubehover.png) no-repeat;
+	background-size: 24px 24px;
 }
-.ffeed{
-	background:url(images/ffeed.png) no-repeat;
-}
-.ffeed:hover {
-	background:url(images/frsshover.png) no-repeat;
-}
+
 /**---------------Pagination------------------------------------------**/
 .shop-pag{
-	
-}
+	margin:20px 0;
+	text-align:center;
+}	
 .shop-pag a{
 	margin:0 5px;
 	font-size:12px;

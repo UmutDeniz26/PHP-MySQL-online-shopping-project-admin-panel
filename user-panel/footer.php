@@ -27,11 +27,12 @@
 					<div class="col-md-3"><!--footer Share-->
 						<div class="followon">Follow us on</div>
 						<div class="fsoc">
-							<a href="http://twitter.com/minimalthemes" class="ftwitter">twitter</a>
-							<a href="http://www.facebook.com/pages/Minimal-Themes/264056723661265"
-								class="ffacebook">facebook</a>
-							<a href="#" class="fflickr">flickr</a>
-							<a href="#" class="ffeed">feed</a>
+							<a href="<?php echo $result["site_twitter"];  
+                            ?>" class="ftwitter social-media-icons" target="_blank" rel="noopener noreferrer">twitter</a>
+                            <a href="<?php echo $result["site_facebook"];
+                            ?>" class="ffacebook social-media-icons" target="_blank" rel="noopener noreferrer">facebook</a>
+                            <a href="<?php echo $result["site_youtube"];
+                            ?>" class="fyoutube social-media-icons" target="_blank" rel="noopener noreferrer">youtube</a>
 							<div class="clearfix"></div>
 						</div>
 						<div class="clearfix"></div>

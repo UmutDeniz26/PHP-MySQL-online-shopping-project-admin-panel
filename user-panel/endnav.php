@@ -89,7 +89,7 @@
 											<li><a href="contact.htm">Contact Page</a></li>
 										</ul>
 									</li>
-									<li><a href="page-sidebar.htm">About</a></li>
+									<li><a href="about-page.php">About</a></li>
 									<li><a href="category.htm">Product</a></li>
 									<li><a href="contact.htm">Contact</a></li>
 								</ul>

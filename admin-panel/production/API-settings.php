@@ -1,51 +1,19 @@
 <!DOCTYPE html>
 <html lang="en">
 
-<head>
-    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-    <!-- Meta, title, CSS, favicons, etc. -->
-    <meta charset="utf-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-
-    <title>Admin Panel</title>
-
-    <!-- Bootstrap -->
-    <link href="../vendors/bootstrap/dist/css/bootstrap.min.css" rel="stylesheet">
-    <!-- Font Awesome -->
-    <link href="../vendors/font-awesome/css/font-awesome.min.css" rel="stylesheet">
-    <!-- NProgress -->
-    <link href="../vendors/nprogress/nprogress.css" rel="stylesheet">
-    <!-- iCheck -->
-    <link href="../vendors/iCheck/skins/flat/green.css" rel="stylesheet">
-    <!-- Datatables -->
-    <link href="../vendors/datatables.net-bs/css/dataTables.bootstrap.min.css" rel="stylesheet">
-    <link href="../vendors/datatables.net-buttons-bs/css/buttons.bootstrap.min.css" rel="stylesheet">
-    <link href="../vendors/datatables.net-fixedheader-bs/css/fixedHeader.bootstrap.min.css" rel="stylesheet">
-    <link href="../vendors/datatables.net-responsive-bs/css/responsive.bootstrap.min.css" rel="stylesheet">
-    <link href="../vendors/datatables.net-scroller-bs/css/scroller.bootstrap.min.css" rel="stylesheet">
-
-    <!-- Custom Theme Style -->
-    <link href="../build/css/custom.min.css" rel="stylesheet">
-</head>
+<?php 
+include_once '../operations/getDataFromTable.php';
+include_once 'meta-head-admin.php'; 
+?>
 
 <body class="nav-md">
     <div class="container body">
         <div class="main_container">
             <?php
-            include 'header.php';
-            include 'sidebar.php';
-            include '../operations/connectdb.php';
-
-            $setup = $db->prepare("SELECT * from config WHERE config_id=:id");
-            $setup->execute(
-                array(
-                    "id" => 1
-                )
-            );
-            $result = $setup->fetch(PDO::FETCH_ASSOC);
+            include_once 'header.php';
+            include_once 'sidebar.php';
+            $result = getDataFromTable("config", "config_id", 1);
             ?>
-
             <div class="right_col" role="main">
                 <div class="">
 
@@ -135,8 +103,8 @@
             </div>
 
             <?php
-            include 'footer.php';
-            include 'scripts.php';
+            include_once 'footer.php';
+            include_once 'scripts.php';
             ?>
 </body>
 
