@@ -1,7 +1,7 @@
 <div class="col-md-3 left_col">
     <div class="left_col scroll-view">
         <div class="navbar nav_title" style="border: 0;">
-            <a href="index.php" class="site_title"><img width="40" height="40" src="images/admin_image.png"></img>
+            <a href="./" class="site_title"><img width="40" height="40" src="images/admin_image.png"></img>
                 <span> ADMIN PANEL</span></a>
         </div>
 
@@ -25,12 +25,14 @@
             <div class="menu_section">
                 <h3>General</h3>
                 <ul class="nav side-menu">
-                    <li><a href="index.php"><i class="fa fa-home"></i> Home Page </a></li>
+                    <li><a href="./"><i class="fa fa-home"></i> Home Page </a></li>
                     <li><a><i class="fa fa-cog"></i> Settings <span class="fa fa-chevron-down"></span></a>
                         <ul class="nav child_menu">
                             <li><a href="general-settings.php">General Settings</a></li>
                             <li><a href="contact-settings.php">Contact Settings</a></li>
                             <li><a href="API-settings.php">API Settings</a></li>
+                            <li><a href="social-media-settings.php">Social Media Settings</a></li>
+                            <li><a href="SMTP-settings.php">SMTP Settings</a></li>
                         </ul>
                     </li>
                 </ul>
