@@ -27,11 +27,11 @@
 					<div class="col-md-3"><!--footer Share-->
 						<div class="followon">Follow us on</div>
 						<div class="fsoc">
-							<a href="<?php echo $result["site_twitter"];  
+							<a href="<?php echo $result_config["site_twitter"];  
                             ?>" class="ftwitter social-media-icons" target="_blank" rel="noopener noreferrer">twitter</a>
-                            <a href="<?php echo $result["site_facebook"];
+                            <a href="<?php echo $result_config["site_facebook"];
                             ?>" class="ffacebook social-media-icons" target="_blank" rel="noopener noreferrer">facebook</a>
-                            <a href="<?php echo $result["site_youtube"];
+                            <a href="<?php echo $result_config["site_youtube"];
                             ?>" class="fyoutube social-media-icons" target="_blank" rel="noopener noreferrer">youtube</a>
 							<div class="clearfix"></div>
 						</div>

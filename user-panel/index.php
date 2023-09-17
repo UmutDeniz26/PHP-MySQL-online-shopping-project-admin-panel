@@ -1,5 +1,6 @@
 ﻿<?php
-include_once('operations/getConfig.php');
+include_once('operations/getDataFromTable.php');
+$result_config = getDataFromTable("config", "config_id", 1);
 ?>
 
 <!DOCTYPE html>

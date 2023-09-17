@@ -1,11 +1,12 @@
+<?php include_once('operations/getDataFromTable.php'); ?>
 <head>
 	<meta charset="utf-8">
-	<meta name="description" content="<?php echo $result['site_description'] ?>">
-	<meta name="keywords" content="<?php echo $result['site_keyword'] ?>">
-	<meta name="author" content="<?php echo $result['site_author'] ?>">
+	<meta name="description" content="<?php echo $result_config['site_description'] ?>">
+	<meta name="keywords" content="<?php echo $result_config['site_keyword'] ?>">
+	<meta name="author" content="<?php echo $result_config['site_author'] ?>">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<title>
-		<?php echo $result['site_title'] ?>
+		<?php echo getDataFromTable("config", "config_id", 1)["site_title"]?>
 	</title>
 
 	<!-- Fonts -->

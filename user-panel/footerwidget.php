@@ -42,20 +42,20 @@
             <div class="col-md-4"><!--footer contact widget-->
                 <div class="title-widget-bg">
                     <div class="title-widget-cursive">
-                        <?php echo $result["site_title"]; ?>
+                        <?php echo $result_config["site_title"]; ?>
                     </div>
                 </div>
                 <ul class="contact-widget">
                     <li class="fmobile">
-                        <?php echo $result["site_faks"] . "<br>" . $result["site_tel"] . "<br>" . $result["site_gsm"];
+                        <?php echo $result_config["site_faks"] . "<br>" . $result_config["site_tel"] . "<br>" . $result_config["site_gsm"];
                         ; ?>
                     </li>
                     <li class="fmail ">
-                        <?php echo $result["site_mail"]; ?>
+                        <?php echo $result_config["site_mail"]; ?>
                     </li>
                     <!-- location adress image at images/location.png -->
                     <li class="fadress lastone">
-                        <?php echo $result["site_adress"]; ?>
+                        <?php echo $result_config["site_adress"]; ?>
                     </li>
                 </ul>
             </div><!--footer contact widget-->

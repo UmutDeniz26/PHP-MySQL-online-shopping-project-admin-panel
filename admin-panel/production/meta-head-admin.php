@@ -1,3 +1,4 @@
+<?php include_once('../operations/getDataFromTable.php'); ?>
 
 <head>
   <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">

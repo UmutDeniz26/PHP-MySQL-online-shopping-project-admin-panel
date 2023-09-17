@@ -52,10 +52,6 @@ include_once 'meta-head-admin.php';
                                         id="update-general-settings-id" data-parsley-validate
                                         class="form-horizontal form-label-left">
 
-                                    <!-- This form collects
-                                about_title,about_content,about_video,about_vision,about_mission-->
-
-
                                         <div class="form-group">
                                             <label class="control-label col-md-3 col-sm-3 col-xs-12"
                                                 for="about_title">About Title <span class="required">*</span>
@@ -64,6 +60,17 @@ include_once 'meta-head-admin.php';
                                                 <input type="text" id="about_title" required
                                                     value="<?php echo $result_about["about_title"] ?>"
                                                     class="form-control col-md-7 col-xs-12" name="about_title">
+                                            </div>
+                                        </div>
+                                       
+                                        <div class="form-group">
+                                            <label class="control-label col-md-3 col-sm-3 col-xs-12"
+                                                for="about_motto">About Motto <span class="required">*</span>
+                                            </label>
+                                            <div class="col-md-6 col-sm-6 col-xs-12">
+                                                <input type="text" id="about_motto" required
+                                                    value="<?php echo $result_about["about_motto"] ?>"
+                                                    class="form-control col-md-7 col-xs-12" name="about_motto">
                                             </div>
                                         </div>
 
@@ -113,7 +120,6 @@ include_once 'meta-head-admin.php';
                                                     rows="10"><?php echo $result_about["about_mission"] ?></textarea>
                                             </div>
                                         </div>
-
 
 
                                         <div class="ln_solid"></div>
