@@ -30,6 +30,7 @@
                         <ul class="nav child_menu">
                             <li><a href="general-settings.php">General Settings</a></li>
                             <li><a href="contact-settings.php">Contact Settings</a></li>
+                            <li><a href="API-settings.php">API Settings</a></li>
                         </ul>
                     </li>
                 </ul>

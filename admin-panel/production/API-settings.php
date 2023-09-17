@@ -81,61 +81,50 @@
                                 </div>
                                 <div class="x_content">
                                     <br />
-                                    <form action="../operations/updateGeneralSettings.php" method="POST"
+                                    <form action="../operations/updateAPISettings.php" method="POST"
                                         id="update-general-settings-id" data-parsley-validate
                                         class="form-horizontal form-label-left">
 
                                         <div class="form-group">
                                             <label class="control-label col-md-3 col-sm-3 col-xs-12"
-                                                for="site_title">Website Title <span class="required">*</span>
+                                                for="site_maps">Maps API <span class="required">*</span>
                                             </label>
                                             <div class="col-md-6 col-sm-6 col-xs-12">
-                                                <input type="text" id="site_title" required
-                                                    value="<?php echo $result["site_title"] ?>"
-                                                    class="form-control col-md-7 col-xs-12" name="site_title">
+                                                <input type="text" id="site_maps" required
+                                                    value="<?php echo $result["site_maps"] ?>"
+                                                    class="form-control col-md-7 col-xs-12" name="site_maps">
                                             </div>
                                         </div>
 
                                         <div class="form-group">
                                             <label class="control-label col-md-3 col-sm-3 col-xs-12"
-                                                for="site_description">Website Description <span
-                                                    class="required">*</span>
+                                                for="site_analytics">Analytics API <span class="required">*</span>
                                             </label>
                                             <div class="col-md-6 col-sm-6 col-xs-12">
-                                                <input type="text" id="site_description" required
-                                                    value="<?php echo $result["site_description"] ?>"
-                                                    class="form-control col-md-7 col-xs-12" name="site_description">
+                                                <input type="text" id="site_analytics" required
+                                                    value="<?php echo $result["site_analytics"] ?>"
+                                                    class="form-control col-md-7 col-xs-12" name="site_analytics">
                                             </div>
                                         </div>
 
                                         <div class="form-group">
                                             <label class="control-label col-md-3 col-sm-3 col-xs-12"
-                                                for="site_keyword">Website Keyword <span class="required">*</span>
+                                                for="site_zopim">Zopim API <span class="required">*</span>
                                             </label>
                                             <div class="col-md-6 col-sm-6 col-xs-12">
-                                                <input type="text" id="site_keyword" required
-                                                    value="<?php echo $result["site_keyword"] ?>"
-                                                    class="form-control col-md-7 col-xs-12" name="site_keyword">
+                                                <input type="text" id="site_zopim" required
+                                                    value="<?php echo $result["site_zopim"] ?>"
+                                                    class="form-control col-md-7 col-xs-12" name="site_zopim">
                                             </div>
                                         </div>
 
-                                        <div class="form-group">
-                                            <label class="control-label col-md-3 col-sm-3 col-xs-12"
-                                                for="site_author">Website Author <span class="required">*</span>
-                                            </label>
-                                            <div class="col-md-6 col-sm-6 col-xs-12">
-                                                <input type="text" id="site_author" required
-                                                    value="<?php echo $result["site_author"] ?>"
-                                                    class="form-control col-md-7 col-xs-12" name="site_author">
-                                            </div>
-                                        </div>
+
                                         <div class="ln_solid"></div>
                                         <div class="form-group">
                                             <div class="col-md-6 col-sm-6 col-xs-12 col-md-offset-3">
                                                 <button type="submit" class="btn btn-success"
                                                     name="save-updated-settings">Submit</button>
                                             </div>
-
                                         </div>
                                     </form>
                                 </div>
